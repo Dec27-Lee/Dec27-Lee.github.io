@@ -18,4 +18,12 @@
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
   </entry>
+  <entry>
+    <title>测试</title>
+    <url>/2020/02/10/%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6/</url>
+    <content><![CDATA[<h2 id="该怎么开始呢"><a href="#该怎么开始呢" class="headerlink" title="该怎么开始呢???"></a>该怎么开始呢???</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+]]></content>
+  </entry>
 </search>
