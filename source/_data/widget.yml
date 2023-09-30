@@ -1,0 +1,23 @@
+# 自定义侧边栏的小部件
+  # top: 创建的widget 会出现在非sticky 区域（即所有页面都会显示)
+  # bottom: 创建的widget 会出现在sticky 区域（除了文章页都会显示)
+  # class_name: 所创建的widget 父类class 名（可选）
+  # id_name: 所创建的widget 父类id 名（可选）
+  # name: 所创建的widget 标题
+  # icon: 所创建的widget 图标
+  # order: 所创建的widget 排序（可选）不参与侧边栏默认组件的排序
+  # html: 所创建的widget 相关代码
+# --------------------------------------------------------
+
+bottom:
+  - class_name: user-map
+    id_name: user-map
+    name: 访客地图
+    icon: fas fa-heartbeat
+    order: 2
+    html: '<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=5V2tOKp8qAdRM-i8eu7ETTO9ugt5uKbbG-U7Yj8uMl8"></script>'
+  - class_name: another-widget
+    id_name: another-widget
+    name: 另一个小部件
+    icon: fas fa-cog
+    order: 1
