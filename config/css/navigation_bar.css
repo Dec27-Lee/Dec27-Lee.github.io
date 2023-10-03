@@ -1,0 +1,284 @@
+/*
+ * @Description: 导航栏样式
+ * @LastEditors: 他们叫我跃总 Dec27-Lee
+ * @Date: 2023-10-03 17:06:33
+ * @LastEditTime: 2023-10-04 00:51:03
+ * @FilePath: \Dec27-Lee.github.iof:\Develop_F\Blog\source\config\css\navigation_bar.css
+ */
+
+/* 导航栏中的样式 */
+#nav {
+    flex-wrap: nowrap;
+    /* 不换行 */
+    justify-content: space-between;
+    /* 两侧对齐 */
+}
+
+/* 导航栏整体居中 */
+#nav #menus {
+    display: flex;
+    /* 设置弹性布局，用于水平居中导航栏 */
+    justify-content: center;
+    /* 水平居中 */
+    width: 100%;
+    /* 宽度占满父容器 */
+    position: absolute;
+    /* 绝对定位，相对于父容器定位 */
+    height: 40px;
+    /* 导航栏高度 */
+    left: 0;
+    /* 距离左边为0 */
+    margin: 0;
+    /* 无外边距 */
+    transform: translateZ(0);
+    /* 3D变换，用于提升渲染性能 */
+}
+
+#nav .menus_items {
+    position: relative;
+    /* 相对定位，用于子菜单定位 */
+    width: fit-content;
+    /* 宽度根据内容自适应 */
+    text-align: center;
+    /* 文本居中 */
+    left: 0px;
+    /* 距离左侧为0 */
+    right: 0px;
+    /* 距离右侧为0 */
+    top: 0px;
+    /* 距离顶部为0 */
+    display: flex;
+    /* 弹性布局，用于水平排列子菜单项 */
+    flex-direction: row;
+    /* 水平排列 */
+    justify-content: center;
+    /* 水平居中 */
+}
+
+/* 导航栏菜单项样式 */
+#menus>div.menus_items>div>a {
+    letter-spacing: 0.3rem;
+    /* 字母间距 */
+    padding-left: 0.7rem;
+    /* 左内边距 */
+    font-weight: bold;
+    /* 字体加粗 */
+    padding-top: 0;
+    /* 顶部内边距 */
+    padding-bottom: 0;
+    /* 底部内边距 */
+    height: 35px;
+    /* 高度 */
+    line-height: 35px;
+    /* 行高 */
+    border-radius: 40px;
+    /* 边框圆角 */
+}
+
+#nav .menus_items .menus_item .menus_item_child {
+    padding: 6px 4px 8px 4px;
+    /* 内边距 */
+    border-radius: 100px;
+    /* 边框圆角 */
+    background-color: var(--bywind-card-bg);
+    /* 背景颜色 */
+    box-shadow: var(--bywind-shadow-black);
+    /* 阴影 */
+    border: var(--style-border);
+    /* 边框样式 */
+    transition: 0.3s;
+    /* 过渡效果 */
+    backdrop-filter: blur(20px);
+    /* 背景模糊 */
+    -webkit-backdrop-filter: blur(20px);
+    /* Safari 背景模糊 */
+    transform: translateZ(0);
+    /* 3D变换 */
+    top: 35px;
+    /* 距离顶部距离 */
+}
+
+
+/* 子菜单项链接样式 */
+#nav .menus_items .menus_item .menus_item_child li a {
+    letter-spacing: 0rem;
+    /* 字母间距为0，取消字母间距 */
+    display: flex;
+    /* 弹性布局，用于子菜单项排列 */
+    align-items: center;
+    /* 垂直居中对齐 */
+    border-radius: 100px;
+    /* 边框圆角 */
+    padding: 0.3rem 0.8rem;
+    /* 内边距 */
+    width: 100%;
+    /* 宽度占满容器 */
+    color: var(--bywind-fontcolor) !important;
+    /* 字体颜色 */
+    text-shadow: none !important;
+    /* 文本阴影 */
+}
+
+#page-header.nav-fixed #nav #menus[style*="padding-right: 300px;"] .menus_items {
+    transform: translateX(-150px);
+    /* 通过位移调整导航栏位置 */
+}
+
+#page-header.nav-fixed>#nav,
+#page-header.not-top-img>#nav {
+    box-shadow: none;
+    /* 固定导航栏无阴影 */
+}
+
+
+.fa,
+.fa-brands,
+.fas,
+.fa-light,
+.fa-regular,
+.fa-solid,
+.fa-thin,
+.fab,
+.fad,
+.fal,
+.far,
+.fas,
+.fat {
+    line-height: 1;
+    /* 字体行高为1 */
+}
+
+#nav .menus_items .menus_item .menus_item_child:before {
+    top: -5px;
+    /* 子菜单项前面的内容向上偏移 */
+}
+
+#nav .menus_items .menus_item .menus_item_child li a i:not(.fa-brands) {
+    font-size: 22px;
+    /* 字体大小 */
+    margin-right: 8px;
+    /* 右外边距 */
+    line-height: 1;
+    /* 字体行高为1 */
+}
+
+#nav .menus_items .menus_item {
+    padding: 0 0.4rem;
+    /* 左右内边距 */
+    display: flex;
+    /* 弹性布局，用于垂直排列子菜单项 */
+    flex-direction: column;
+    /* 垂直排列 */
+    align-items: center;
+    /* 垂直居中对齐 */
+    margin: auto;
+    /* 自动外边距，用于居中 */
+    position: relative;
+    /* 相对定位，用于子菜单项定位 */
+}
+
+#nav .menus_items .menus_item .menus_item_child li {
+    display: inline-flex;
+    /* 行内块级元素排列 */
+    list-style: none;
+    /* 隐藏列表样式 */
+    border-radius: 5px;
+    /* 边框圆角 */
+    margin: 0 4px;
+    /* 外边距 */
+}
+
+/* 导航栏按钮悬浮 */
+#nav a {
+    border-radius: 8px;
+    /* 边框圆角 */
+}
+
+.nav-fixed #nav a {
+    color: var(--bywind-fontcolor);
+    /* 固定导航栏按钮字体颜色 */
+    transition: 0.3s;
+    /* 过渡效果 */
+}
+
+.topbar-html {
+    background: #aeaeae !important;
+    /* 顶部栏背景颜色 */
+}
+
+#mozi-assist {
+    position: fixed;
+    /* 固定定位 */
+    z-index: 999;
+    /* 层级 */
+}
+
+.topbar-html-content {
+    height: 160px !important;
+    /* 顶部栏内容高度 */
+    align-items: flex-end;
+    /* 底部对齐 */
+    padding-bottom: 12px;
+    /* 底部内边距 */
+}
+
+.topbar-html {
+    box-shadow: none !important;
+    /* 顶部栏无阴影 */
+}
+
+.bigtext-html-btn {
+    display: flex;
+    /* 弹性布局 */
+    align-items: center;
+    /* 垂直居中对齐 */
+    justify-content: center;
+    /* 水平居中对齐 */
+}
+
+.topbar-html-content-item img {
+    border-radius: 12px !important;
+    /* 图片圆角 */
+}
+
+/* 导航栏禁止隐藏 */
+/* 
+#page-header.nav-fixed #nav {
+    top: 0;
+    box-shadow: none;
+    background: var(--bywind-card-bg);
+    outline: 1px solid var(--bywind-card-border);
+}
+*/
+
+
+/* 悬浮样式 */
+
+#nav .menus_items .menus_item:hover .menus_item_child {
+    border: var(--style-border-hover);
+    /* 悬浮时边框样式 */
+    box-shadow: var(--bywind-shadow-main);
+    /* 悬浮时阴影效果 */
+}
+
+#sidebar #sidebar-menus .menus_items .site-page span:hover {
+    color: var(--bywind-fontcolor);
+    /* 悬浮时字体颜色 */
+}
+
+#nav .menus_items .menus_item .menus_item_child li a:hover {
+    background: var(--bywind-main) !important;
+    /* 悬浮时背景颜色 */
+    color: var(--bywind-white) !important;
+    /* 悬浮时字体颜色 */
+    box-shadow: var(--bywind-shadow-main);
+    /* 悬浮时阴影效果 */
+    margin: 0 auto;
+    /* 居中 */
+    transform: scale(1) !important;
+    /* 缩放 */
+    padding: 0.3rem 1rem;
+    /* 内边距 */
+}
+
+/* site-page 样式 */
