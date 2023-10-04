@@ -2,11 +2,11 @@
  * @Description: 导航栏样式
  * @LastEditors: 他们叫我跃总 Dec27-Lee
  * @Date: 2023-10-03 17:06:33
- * @LastEditTime: 2023-10-04 00:51:03
+ * @LastEditTime: 2023-10-04 16:26:51
  * @FilePath: \Dec27-Lee.github.iof:\Develop_F\Blog\source\config\css\navigation_bar.css
  */
 
-/* 导航栏中的样式 */
+/* 导航栏区域整体样式 */
 #nav {
     flex-wrap: nowrap;
     /* 不换行 */
@@ -34,6 +34,7 @@
     /* 3D变换，用于提升渲染性能 */
 }
 
+/* 导航栏一级菜单整体 */
 #nav .menus_items {
     position: relative;
     /* 相对定位，用于子菜单定位 */
@@ -55,12 +56,14 @@
     /* 水平居中 */
 }
 
-/* 导航栏菜单项样式 */
+/* 导航栏一级菜单每一项 */
 #menus>div.menus_items>div>a {
     letter-spacing: 0.3rem;
     /* 字母间距 */
     padding-left: 0.7rem;
     /* 左内边距 */
+    font-size: 17px;
+    /* 字号 */
     font-weight: bold;
     /* 字体加粗 */
     padding-top: 0;
@@ -75,14 +78,15 @@
     /* 边框圆角 */
 }
 
+/* 导航栏二级菜单整体 */
 #nav .menus_items .menus_item .menus_item_child {
     padding: 6px 4px 8px 4px;
     /* 内边距 */
     border-radius: 100px;
     /* 边框圆角 */
-    background-color: var(--bywind-card-bg);
+    background-color: var(--yue-card-bg);
     /* 背景颜色 */
-    box-shadow: var(--bywind-shadow-black);
+    box-shadow: var(--yue-shadow-black);
     /* 阴影 */
     border: var(--style-border);
     /* 边框样式 */
@@ -94,12 +98,12 @@
     /* Safari 背景模糊 */
     transform: translateZ(0);
     /* 3D变换 */
-    top: 35px;
+    top: 30px;
     /* 距离顶部距离 */
 }
 
 
-/* 子菜单项链接样式 */
+/* 导航栏二级菜单每一项的样式 */
 #nav .menus_items .menus_item .menus_item_child li a {
     letter-spacing: 0rem;
     /* 字母间距为0，取消字母间距 */
@@ -113,53 +117,10 @@
     /* 内边距 */
     width: 100%;
     /* 宽度占满容器 */
-    color: var(--bywind-fontcolor) !important;
+    color: var(--yue-fontcolor) !important;
     /* 字体颜色 */
     text-shadow: none !important;
     /* 文本阴影 */
-}
-
-#page-header.nav-fixed #nav #menus[style*="padding-right: 300px;"] .menus_items {
-    transform: translateX(-150px);
-    /* 通过位移调整导航栏位置 */
-}
-
-#page-header.nav-fixed>#nav,
-#page-header.not-top-img>#nav {
-    box-shadow: none;
-    /* 固定导航栏无阴影 */
-}
-
-
-.fa,
-.fa-brands,
-.fas,
-.fa-light,
-.fa-regular,
-.fa-solid,
-.fa-thin,
-.fab,
-.fad,
-.fal,
-.far,
-.fas,
-.fat {
-    line-height: 1;
-    /* 字体行高为1 */
-}
-
-#nav .menus_items .menus_item .menus_item_child:before {
-    top: -5px;
-    /* 子菜单项前面的内容向上偏移 */
-}
-
-#nav .menus_items .menus_item .menus_item_child li a i:not(.fa-brands) {
-    font-size: 22px;
-    /* 字体大小 */
-    margin-right: 8px;
-    /* 右外边距 */
-    line-height: 1;
-    /* 字体行高为1 */
 }
 
 #nav .menus_items .menus_item {
@@ -195,7 +156,7 @@
 }
 
 .nav-fixed #nav a {
-    color: var(--bywind-fontcolor);
+    color: var(--yue-fontcolor);
     /* 固定导航栏按钮字体颜色 */
     transition: 0.3s;
     /* 过渡效果 */
@@ -246,32 +207,31 @@
 #page-header.nav-fixed #nav {
     top: 0;
     box-shadow: none;
-    background: var(--bywind-card-bg);
-    outline: 1px solid var(--bywind-card-border);
+    background: var(--yue-card-bg);
+    outline: 1px solid var(--yue-card-border);
 }
 */
 
 
-/* 悬浮样式 */
-
+/* 鼠标悬浮菜单上时的样式 */
 #nav .menus_items .menus_item:hover .menus_item_child {
     border: var(--style-border-hover);
     /* 悬浮时边框样式 */
-    box-shadow: var(--bywind-shadow-main);
+    box-shadow: var(--yue-shadow-main);
     /* 悬浮时阴影效果 */
 }
 
 #sidebar #sidebar-menus .menus_items .site-page span:hover {
-    color: var(--bywind-fontcolor);
+    color: var(--yue-fontcolor);
     /* 悬浮时字体颜色 */
 }
 
-#nav .menus_items .menus_item .menus_item_child li a:hover {
-    background: var(--bywind-main) !important;
+#nav .menus_items .menus_item:hover>a {
+    background: var(--yue-main) !important;
     /* 悬浮时背景颜色 */
-    color: var(--bywind-white) !important;
+    color: var(--yue-white) !important;
     /* 悬浮时字体颜色 */
-    box-shadow: var(--bywind-shadow-main);
+    box-shadow: var(--yue-shadow-main);
     /* 悬浮时阴影效果 */
     margin: 0 auto;
     /* 居中 */
@@ -281,4 +241,67 @@
     /* 内边距 */
 }
 
+#nav .menus_items .menus_item .menus_item_child li a:hover {
+    background: var(--yue-main) !important;
+    /* 悬浮时背景颜色 */
+    color: var(--yue-white) !important;
+    /* 悬浮时字体颜色 */
+    box-shadow: var(--yue-shadow-main);
+    /* 悬浮时阴影效果 */
+    margin: 0 auto;
+    /* 居中 */
+    transform: scale(1) !important;
+    /* 缩放 */
+    padding: 0.3rem 1rem;
+    /* 内边距 */
+}
+
+
+/* 导航栏乱七八糟 */
+
+#page-header.nav-fixed #nav #menus[style*="padding-right: 300px;"] .menus_items {
+    transform: translateX(-150px);
+    /* 通过位移调整导航栏位置 */
+}
+
+#page-header.nav-fixed>#nav,
+#page-header.not-top-img>#nav {
+    box-shadow: none;
+    /* 固定导航栏无阴影 */
+}
+
+.fa,
+.fa-brands,
+.fas,
+.fa-light,
+.fa-regular,
+.fa-solid,
+.fa-thin,
+.fab,
+.fad,
+.fal,
+.far,
+.fas,
+.fat {
+    line-height: 1;
+    /* 字体行高为1 */
+}
+
+#nav .menus_items .menus_item .menus_item_child:before {
+    top: -5px;
+    /* 子菜单项前面的内容向上偏移 */
+}
+
+#nav .menus_items .menus_item .menus_item_child li a i:not(.fa-brands) {
+    font-size: 22px;
+    /* 字体大小 */
+    margin-right: 8px;
+    /* 右外边距 */
+    line-height: 1;
+    /* 字体行高为1 */
+}
+
 /* site-page 样式 */
+#nav .site-page:not(.child):after {
+    display: none
+}

@@ -2,7 +2,7 @@
  * @Description: home-top 样式管理
  * @LastEditors: 他们叫我跃总 Dec27-Lee
  * @Date: 2023-10-03 15:32:00
- * @LastEditTime: 2023-10-03 15:32:24
+ * @LastEditTime: 2023-10-04 18:01:06
  * @FilePath: \Dec27-Lee.github.iof:\Develop_F\Blog\source\config\css\home-top.css
  */
 #home_top {
@@ -11,6 +11,11 @@
     margin-top: .5rem;
     padding: 0 1.5rem;
     width: 100%
+}
+
+/* 保证全局宽度在不同分辨率下一致 */
+.layout#content-inner {
+    max-width: 1400px
 }
 
 @media screen and (max-width: 768px) {
@@ -46,7 +51,7 @@
     flex-direction: column;
     align-items: flex-start;
     margin-left: .5rem;
-    background: var(--bywind-card-bg);
+    background: var(--yue-card-bg);
     border-radius: 12px;
     overflow: hidden;
     min-width: 200px;
@@ -55,7 +60,7 @@
     border: var(--style-border-always);
     transition: .3s;
     position: relative;
-    box-shadow: var(--bywind-shadow-border)
+    box-shadow: var(--yue-shadow-border)
 }
 
 @media screen and (max-width: 768px) {
@@ -96,8 +101,8 @@ span.recent-post-top-text {
     left: -40px;
     display: flex;
     z-index: 1;
-    background: var(--bywind-theme);
-    color: var(--bywind-white);
+    background: var(--yue-theme);
+    color: var(--yue-white);
     padding: 2px 8px;
     font-size: .6rem;
     border-radius: 12px 0 12px 0;
@@ -112,7 +117,7 @@ span.recent-post-top-text {
 @media screen and (min-width: 1300px) {
     .recent-post-top .recent-post-item:hover {
         border: var(--style-border-hover);
-        box-shadow: var(--bywind-shadow-main);
+        box-shadow: var(--yue-shadow-main);
         transform: scale(1.03)
     }
 
@@ -124,7 +129,7 @@ span.recent-post-top-text {
 @media screen and (max-width: 768px) {
     .recent-top-post-group {
         border-radius: 0;
-        background: var(--bywind-background)
+        background: var(--yue-background)
     }
 
     .recent-post-top-text {
@@ -145,7 +150,7 @@ span.recent-post-top-text {
 .recent-post-top .recent-post-item .post_cover img {
     object-fit: cover;
     width: 100%;
-    background: var(--bywind-secondbg);
+    background: var(--yue-secondbg);
     border-radius: 12px 12px 0 0
 }
 
@@ -159,12 +164,12 @@ span.recent-post-top-text {
 }
 
 .recent-post-top .recent-post-item:hover .recent-post-info a {
-    color: var(--bywind-fontcolor)
+    color: var(--yue-fontcolor)
 }
 
 @media screen and (max-width: 1300px) {
     .recent-post-top .recent-post-item:hover .recent-post-info a {
-        color: var(--bywind-theme);
+        color: var(--yue-theme);
         transition: .3s
     }
 }
@@ -195,14 +200,14 @@ span.recent-post-top-text {
 a.categoryButton {
     height: 100%;
     width: 100%;
-    background: var(--bywind-card-bg);
+    background: var(--yue-card-bg);
     border-radius: 12px;
     display: inline-block;
     text-align: left;
     line-height: 4em;
     font-weight: bold;
     font-size: 0.9rem;
-    color: var(--bywind-white);
+    color: var(--yue-white);
     transition: all 0.8s cubic-bezier(0.39, 0.575, 0.565, 1);
     transform: scale(1);
     overflow: hidden;
@@ -236,7 +241,7 @@ a.categoryButton:after {
     width: 1rem;
     left: 21px;
     height: 2px;
-    background: var(--bywind-white);
+    background: var(--yue-white);
     content: "";
     border-radius: 1px;
     position: absolute;
@@ -314,13 +319,13 @@ div#banners {
         display: flex;
         width: 100%;
         height: 76%;
-        background: var(--bywind-card-bg);
+        background: var(--yue-card-bg);
         margin-bottom: 0.5rem;
         border: var(--style-border);
         border-radius: 12px;
         overflow: hidden;
         position: relative;
-        box-shadow: var(--bywind-shadow-border);
+        box-shadow: var(--yue-shadow-border);
         flex-direction: column;
         overflow: hidden;
         transition: 0.3s;
@@ -328,7 +333,7 @@ div#banners {
     }
 
     div#banners:hover {
-        box-shadow: var(--bywind-shadow-main);
+        box-shadow: var(--yue-shadow-main);
     }
 
     #banners.flink {
@@ -344,28 +349,28 @@ div#banners {
 
     #banners .banner-button {
         padding: 8px 12px;
-        background: var(--bywind-fontcolor);
+        background: var(--yue-fontcolor);
         border-radius: 12px;
-        color: var(--bywind-card-bg);
+        color: var(--yue-card-bg);
         display: flex;
         align-items: center;
         z-index: 1;
         transition: 0.3s;
         cursor: pointer;
-        box-shadow: var(--bywind-shadow-black);
+        box-shadow: var(--yue-shadow-black);
     }
 
     #banners .banner-button.secondary {
-        background: var(--bywind-secondbg);
+        background: var(--yue-secondbg);
         border: var(--style-border-always);
-        color: var(--bywind-lighttext);
+        color: var(--yue-lighttext);
         margin-right: 1rem;
-        box-shadow: var(--bywind-shadow-border);
+        box-shadow: var(--yue-shadow-border);
     }
 
     #banners .banner-button:hover {
-        background: var(--bywind-theme);
-        color: var(--bywind-white);
+        background: var(--yue-theme);
+        color: var(--yue-white);
     }
 
     #banners .banner-button i {
@@ -392,7 +397,7 @@ div#banners {
     .banners-title-small {
         font-size: 12px;
         line-height: 1;
-        color: var(--bywind-secondtext);
+        color: var(--yue-secondtext);
         margin-top: 8px;
         margin-bottom: 0.5rem;
     }
@@ -403,8 +408,8 @@ div#banners {
         height: 100%;
         top: 0;
         left: 0;
-        background: var(--bywind-theme);
-        color: var(--bywind-white);
+        background: var(--yue-theme);
+        color: var(--yue-white);
         padding-left: 0.5rem;
         display: flex;
         flex-direction: column;
@@ -430,8 +435,6 @@ div#banners {
         background: #4259efc9;
         backdrop-filter: blur(15px);
         -webkit-backdrop-filter: blur(15px);
-        -webkit-backface-visibility: hidden;
-        -webkit-transform-style: preserve-3d;
         transition: 0.3s;
         background-size: 200%;
         cursor: pointer;
@@ -449,7 +452,7 @@ div#banners {
         z-index: 1;
         top: 0;
         left: 0;
-        background: var(--bywind-card-bg);
+        background: var(--yue-card-bg);
         border-radius: 12px;
         margin-left: 0.5rem;
         overflow: hidden;
@@ -478,7 +481,7 @@ div#banners {
         bottom: 2rem;
         left: 2rem;
         z-index: 2;
-        color: var(--bywind-white);
+        color: var(--yue-white);
         max-width: 60%;
         transition: 0.3s;
     }
@@ -512,9 +515,9 @@ div#banners {
     }
 
     .topGroup .banner-button {
-        background: var(--bywind-white-op);
+        background: var(--yue-white-op);
         border-radius: 20px;
-        color: var(--bywind-white);
+        color: var(--yue-white);
         display: flex;
         align-items: center;
         z-index: 1;
@@ -529,8 +532,8 @@ div#banners {
     }
 
     .topGroup .banner-button:hover {
-        background: var(--bywind-theme);
-        color: var(--bywind-white);
+        background: var(--yue-theme);
+        color: var(--yue-white);
     }
 
     .topGroup .banner-button i {
@@ -598,7 +601,7 @@ div#banners {
     color: #fff;
     font-size: 66px;
     font-weight: 700;
-    box-shadow: var(--bywind-shadow-blackdeep)
+    box-shadow: var(--yue-shadow-blackdeep)
 }
 
 .nowrapMove .tags-group-icon {
@@ -632,7 +635,7 @@ div#banners {
 }
 
 .cate-button-text {
-    box-shadow: var(--bywind-shadow-black)
+    box-shadow: var(--yue-shadow-black)
 }
 
 .recent-post-top .categoryGroup {

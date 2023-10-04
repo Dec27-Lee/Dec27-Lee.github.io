@@ -1,0 +1,124 @@
+/* 主页哔哔bb */
+#bber-talk {
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    display: flex;
+    flex-direction: column
+}
+
+#bbtalk {
+    overflow: hidden;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#bber-talk .li-style {
+    width: auto;
+    max-width: 100%;
+    height: 25px;
+    text-align: center;
+    text-overflow: ellipsis;
+    transition: .3s;
+    font-weight: 700;
+    font-size: 20px;
+    margin: auto;
+    cursor: pointer;
+    white-space: nowrap
+}
+
+#bbTimeList .li-style:hover {
+    color: var(--yue-theme);
+    transition: .3s
+}
+
+li,
+ul {
+    list-style: none;
+    display: block;
+    margin: 0;
+    padding: 0
+}
+
+.bbtalk-title {
+    width: auto;
+    max-width: 100%;
+    height: 25px;
+    text-overflow: ellipsis;
+    transition: .3s;
+    font-weight: 700;
+    font-size: 30px;
+    margin: auto;
+    cursor: pointer;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+}
+
+#bbTimeList {
+    background: var(--yue-card-bg);
+    color: var(--yue-fontcolor);
+    padding: .5rem 1rem;
+    border-radius: 12px;
+    box-shadow: var(--yue-shadow-lightblack);
+    display: flex;
+    transition: .3s;
+    margin-bottom: 1rem;
+    border: var(--style-border);
+    align-items: center;
+    height: 50px;
+    -webkit-user-select: none
+}
+
+#bbTimeList.more-page {
+    margin-bottom: 0
+}
+
+@media screen and (min-width: 768px) {
+    #bbTimeList:hover {
+        border: var(--style-border-hover);
+        box-shadow: var(--yue-shadow-main);
+        background: var(--yue-card-bg)
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    #bbTimeList {
+        margin-bottom: 1rem;
+        animation: slide-in .6s 0s backwards
+    }
+}
+
+.bber-gotobb {
+    line-height: 25px;
+    margin-left: 1rem;
+    transition: .3s;
+    cursor: pointer
+}
+
+.bber-logo {
+    font-size: 1.5rem;
+    line-height: 22px;
+    margin-right: 1rem;
+    transition: .3s;
+    cursor: pointer
+}
+
+.bber-logo:hover {
+    opacity: .8;
+    color: var(--yue-theme)
+}
+
+.bber-gotobb:hover {
+    opacity: .8;
+    color: var(--yue-theme)
+}
+
+.bber-gotobb {
+    font-size: 16px
+}
