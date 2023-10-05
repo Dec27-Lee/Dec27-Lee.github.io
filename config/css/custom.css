@@ -1,0 +1,410 @@
+/*
+ * @Description: 针对所有页面生效的公共配置
+ * @LastEditors: 他们叫我跃总 Dec27-Lee
+ * @Date: 2023-10-05 21:40:48
+ * @LastEditTime: 2023-10-05 22:17:28
+ * @FilePath: \Dec27-Lee.github.iof:\Develop_F\Blog\source\config\css\custom.css
+ */
+/* 不知道是啥改就完事了 */
+* {
+    box-sizing: border-box;
+}
+
+/* page区域主题原生样式修改-隐藏自带的框架 */
+#page {
+    background: 0 0;
+    border: none;
+    padding: 0;
+    min-height: calc(100vh - 464px);
+    box-shadow: none
+}
+
+/* 各独立页面的顶部介绍banner */
+.author-content.author-content-item.toolPage {
+    height: 25rem;
+    background: url(https://p.zhheo.com/2023331f5bb47c063ef770c13ed9d1c2912b083802.png!cover) no-repeat top;
+    background-size: cover;
+    color: var(--yue-white);
+    overflow: hidden;
+    margin-top: 0
+}
+
+.author-content.author-content-item.momentsPage {
+    height: 25rem;
+    background: url(https://p.zhheo.com/20234860bdbab0f500c3b0e0f1a21d3c166e081002.png!cover) no-repeat top;
+    background-size: cover;
+    color: var(--yue-white);
+    overflow: hidden;
+    margin-top: 0
+}
+
+.author-content.author-content-item.essayPage {
+    height: 25rem;
+    background: url(https://p.zhheo.com/2023e02cff7c3ddef5c06b908fef079fbcfe081902.png!cover) no-repeat center;
+    background-size: cover;
+    color: var(--yue-white);
+    overflow: hidden;
+    margin-top: 0
+}
+
+.author-content.author-content-item.equipment {
+    height: 25rem;
+    background: url(https://p.zhheo.com/kPJnWT22990681686042509223.png!cover) no-repeat top;
+    background-size: cover;
+    color: var(--yue-white);
+    overflow: hidden;
+    margin-top: 0
+}
+
+.author-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1rem
+}
+
+.author-content-item-group.column {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+    justify-content: space-between
+}
+
+.author-content-item {
+    width: 49%;
+    border-radius: 24px;
+    background: var(--yue-card-bg);
+    border: var(--style-border-always);
+    box-shadow: var(--yue-shadow-border);
+    position: relative;
+    padding: 1rem 2rem;
+    overflow: hidden
+}
+
+.author-content-item.single {
+    width: 100%
+}
+
+.author-content-item .author-content-item-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1
+}
+
+.author-content-item .author-content-item-tips {
+    opacity: .8;
+    font-size: .6rem;
+    margin-bottom: .5rem
+}
+
+@media screen and (max-width: 768px) {
+    .author-content-item {
+        width: 100% !important;
+        margin-top: 1rem;
+        padding: 1rem
+    }
+
+    .author-content-item-group.column {
+        width: 100% !important
+    }
+
+    .author-content {
+        margin-top: 0
+    }
+}
+
+.card-background-icon {
+    font-size: 12rem;
+    opacity: .2;
+    position: absolute;
+    right: 0;
+    bottom: -40%;
+    transform: rotate(30deg);
+    transition: 2s ease-in-out
+}
+
+.author-content-item:hover .card-background-icon {
+    transform: rotate(20deg)
+}
+
+.author-content-item.about-statistic .card-content .banner-button-group .banner-button:hover {
+    background: #998c5a;
+    color: var(--yue-card-bg)
+}
+
+.author-content-item.single.reward .author-content-item .author-content-item-title {
+    color: var(--yue-red)
+}
+
+.author-content-item.single.reward .reward-list-all {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    margin-left: -.25rem;
+    margin-right: -.25rem
+}
+
+.author-content-item.single.reward .reward-list-all .reward-list-item {
+    padding: 1rem;
+    border-radius: 12px;
+    border: var(--style-border-always);
+    width: calc((100% / 6) - .5rem);
+    margin: 0 .25rem .5rem .25rem;
+    box-shadow: var(--yue-shadow-border);
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.reward-list-tips p {
+    font-size: 12px;
+    color: var(--yue-secondtext)
+}
+
+@media screen and (max-width: 1200px) {
+    .author-content-item.single.reward .reward-list-all .reward-list-item {
+        width: calc((100% / 4) - .5rem)
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .author-content-item.single.reward .reward-list-all .reward-list-item {
+        width: calc((100% / 2) - .5rem)
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .author-content-item.single.reward .reward-list-all .reward-list-item {
+        width: 100%
+    }
+}
+
+.author-content-item.single.reward .author-content-item-description {
+    font-size: 16px;
+    margin-top: .5rem
+}
+
+.author-content-item.single.reward .reward-list-all .reward-list-item .reward-list-item-name {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: .5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.author-content-item.single.reward .reward-list-all .reward-list-item .reward-list-bottom-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.author-content-item.single.reward .reward-list-all .reward-list-item .reward-list-item-money {
+    padding: 4px;
+    background: var(--yue-fontcolor);
+    color: var(--yue-card-bg);
+    font-size: 12px;
+    line-height: 1;
+    border-radius: 4px;
+    margin-right: 4px;
+    white-space: nowrap
+}
+
+.author-content-item.single.reward .reward-list-all .reward-list-item .reward-list-item-time {
+    font-size: 12px;
+    color: var(--yue-secondtext);
+    white-space: nowrap
+}
+
+.author-content-item.single.reward .reward-list-updateDate {
+    color: var(--yue-gray);
+    font-size: 14px
+}
+
+.author-content-item.single.reward .post-reward {
+    position: absolute;
+    right: 2rem;
+    top: 2rem
+}
+
+.author-content-item.single.reward .post-reward .reward-button {
+    padding: 8px 12px;
+    background: var(--yue-red);
+    border-radius: 12px;
+    color: var(--yue-white);
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    transition: .3s;
+    cursor: pointer;
+    box-shadow: none;
+    width: fit-content;
+    height: fit-content;
+    line-height: 2;
+    user-select: none
+}
+
+.author-content-item.single.reward .post-reward:hover .reward-button {
+    filter: brightness(1.1)
+}
+
+@media screen and (max-width: 768px) {
+    .author-content-item.single.reward .post-reward .reward-button {
+        display: none
+    }
+}
+
+.author-content-item.single.reward .post-reward .reward-button i {
+    margin-right: 8px;
+    font-size: 1rem
+}
+
+.author-content-item.single.reward .post-reward .reward-main {
+    top: 60px;
+    right: 0;
+    left: auto;
+    bottom: auto;
+    width: fit-content;
+    box-shadow: var(--yue-shadow-border)
+}
+
+.author-content-item.single.reward .post-reward .reward-main .reward-all::before {
+    bottom: auto;
+    top: -16px
+}
+
+.author-content-item.single.reward a.reward-main-btn {
+    display: none
+}
+
+.author-content-item.game-lol {
+    background: url(https://bu.dusays.com/2023/03/12/640dc7d294f69.png) no-repeat top;
+    background-size: cover;
+    min-height: 300px;
+    overflow: hidden;
+    color: var(--yue-white);
+    width: 59%
+}
+
+.author-content-item .card-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem
+}
+
+@media screen and (max-width: 768px) {
+    .author-content-item .card-content {
+        padding: 1rem
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .author-content-item {
+        animation: slide-in .6s 0s backwards
+    }
+}
+
+.author-content-item.game-lol::after {
+    box-shadow: 0 -69px 203px 11px #04120f inset;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0
+}
+
+video.author-content-video {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1
+}
+
+.author-content-item .content-bottom {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.author-content-item .content-bottom .icon-group {
+    display: flex
+}
+
+.author-content-item .content-bottom .icon-group i {
+    display: inline-block;
+    width: 22px;
+    height: 18px;
+    margin-right: .5rem
+}
+
+.author-content-item .card-content .author-content-item-title {
+    margin-bottom: .5rem
+}
+
+.author-content-item .card-content .banner-button-group {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 2rem
+}
+
+.author-content-item .card-content .banner-button-group .banner-button {
+    height: 40px;
+    width: 118px;
+    border-radius: 20px;
+    justify-content: center;
+    background: var(--yue-black-op);
+    color: var(--yue-white);
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    transition: .3s;
+    cursor: pointer;
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transform: translateZ(0)
+}
+
+.author-content-item .card-content .banner-button-group .banner-button:hover {
+    background: var(--yue-lighttext);
+    color: var(--yue-card-bg)
+}
+
+.author-content-item .card-content .banner-button-group .banner-button i {
+    margin-right: 8px;
+    font-size: 22px
+}
+
+@media screen and (max-width: 768px) {
+    .author-content-item .card-content .banner-button-group {
+        right: 1rem;
+        bottom: 1rem
+    }
+
+    .author-content-item .card-content .banner-button-group .banner-button {
+        background: 0 0;
+        color: var(--yue-white);
+        padding: 0;
+        width: fit-content
+    }
+
+    .author-content-item .card-content .banner-button-group .banner-button i {
+        margin-right: 0;
+        font-size: 1.5rem
+    }
+
+    .author-content-item .card-content .banner-button-group .banner-button-text {
+        display: none
+    }
+}

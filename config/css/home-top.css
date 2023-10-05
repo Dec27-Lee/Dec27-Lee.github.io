@@ -435,8 +435,6 @@ div#banners {
         background: #4259efc9;
         backdrop-filter: blur(15px);
         -webkit-backdrop-filter: blur(15px);
-        -webkit-backface-visibility: hidden;
-        -webkit-transform-style: preserve-3d;
         transition: 0.3s;
         background-size: 200%;
         cursor: pointer;

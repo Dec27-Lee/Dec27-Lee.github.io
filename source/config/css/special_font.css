@@ -1,0 +1,38 @@
+/*
+ * @Description: 从这里将特殊字体引用到网页中
+ * @LastEditors: 他们叫我跃总 Dec27-Lee
+ * @Date: 2023-09-30 19:03:08
+ * @LastEditTime: 2023-10-04 20:05:58
+ * @FilePath: \Dec27-Lee.github.iof:\Develop_F\Blog\source\config\css\special_font.css
+ */
+@font-face {
+    font-family: '演示镇魂行楷标准字';
+    /* 字体名称 */
+    src: url('/config/font/演示镇魂行楷标准字.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '演示镇魂行楷斜体';
+    /* 字体名称 */
+    src: url('/config/font/演示镇魂行楷斜体.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '优设标题黑';
+    /* 字体名称 */
+    src: url('/config/font/优设标题黑.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '站酷酷黑';
+    /* 字体名称 */
+    src: url('/config/font/站酷酷黑.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
